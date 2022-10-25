@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: /*black*/;
+}
+h2{
+    position: relative;
+    font-size: 2em;
+    color: rgb(39, 38, 38);
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    color: aliceblue;
+    width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff)drop-shadow(0 0 50px #fff);
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
